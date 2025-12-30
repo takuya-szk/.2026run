@@ -1,147 +1,178 @@
-@charset "UTF-8";
-body {
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
-	background: #fff;
-	background-size: 40px 40px;
+.parent 
+{
+	position:relative;
 }
-#outer {
-	margin: 0 auto;
-	width: 1000px;
-	background-color: #fff;
+
+.child
+{
+	position:absolute;
 }
-header {
-	height: 80px;
-	padding: 20px 30px;
+
+body
+{
+	background-color:rgb(241, 241, 235);
 }
-.header-inner {
-	padding: 0;
-	font-size: 12px;
+.background
+{
+
+
 }
-h1 {
-	font-size: 24px;
-	margin: 0;
-	padding: 0;
+
+.title
+{
+	text-align:center;
+	top:10px;
+	width: 100%;	
 }
-h1 a {
-	color: #000;
-	text-decoration: none;
+
+.userName
+{
+	text-align:center;
+	
+	width: 100%;
 }
-h1 a:hover {
-	text-decoration: underline;
+
+.currentDistance
+{
+	text-align:center;
+	top:90px;
+	
+	width: 100%;
+	
 }
-h2 {
-	font-size: 22px;
-	margin: 0;
-	padding: 10px;
-	background-color: #D6E7EE;
+
+.totalDistance
+{
+	text-align:center;
+	top:20px;
+	
+	width: 100%;	
 }
-h2 a {
-	text-decoration: none;
-	color: #265699;
+
+.itemTitle
+{
+	text-align:center;
+	width: 100%;	
 }
-p {
-	margin: 1em 0;
+.itemSelect
+{
+	text-align:center;
+	width: 100%;
+	top: 50px;
+	left: 0px;
+	font-size: x-large;
+	color: red;
+	
 }
-.aka {
-	color: #B0231D;
-	font-weight: bold;
+.apply
+{
+	top: 100px;
+	text-align:center;
+	font-size: large;
+	color: blue;
+	width: 100%;	
 }
-img {
-	max-width: 100%;
-	height: auto;
-	border: 0;
+
+.menu-wrapper {
+  position: relative;
 }
-a {
-	color: #094a94;
+
+.menu-icon {
+  width: 40px;
+  height: 30px;
+  position: fixed; /* ← fixedにして常に左上固定 */
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 3;
+  display: inline-block;
 }
-#content {
-	padding: 0 20px;
+
+.menu-icon span {
+  display: block;
+  height: 4px;
+  margin: 6px 0;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.4s;
 }
-#content::after {
-	content: "";
-	display: table;
-	clear: both;
+
+/* ハンバーガーがXに変形 */
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
 }
-.inner {
-	float: right;
-	width: 640px;
-	margin: 0;
-	padding: 10px 20px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
 }
-aside {
-	padding: 20px;
-	color: #676767;
-	width: 220px;
-	float: left;
-	background-color: #f8f8f8;
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
 }
-.left-title {
-	padding: 10px;
-	font-weight: bold;
-	color: #333;
+
+/* オーバーレイ背景 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+  z-index: 1;
 }
-.link {
-	margin: 0;
-	padding: 0 0 10px 0;
+
+#menu-toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: auto;
 }
-.link a {
-	color: #094a94;
-	text-decoration: none;
+
+/* メニュー本体（左から出す） */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* ← 初期位置を左へ */
+  width: 250px;
+  height: 100%;
+  background: #fff;
+
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  transition: left 0.4s ease;
+  z-index: 2;
 }
-.link a:hover {
-	text-decoration: underline;
+
+#menu-toggle:checked ‾ .menu {
+  left: 0; /* ← 開いたときは左0へ */
 }
-ul {
-	margin: 0 0 0 1em;
-	padding: 0;
+
+.menu ul {
+  list-style: none;
+  padding: 60px 20px;
 }
-.link li {
-	list-style: none;
-	padding: 4px 0;
+
+.menu li {
+  margin: 20px 0;
 }
-footer {
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #007bff;
+}
+
+table 
+{
+	border-collapse: collapse;
+	width: 60%;
+	margin: 20px auto;
+}
+th, td {
+	border: 1px solid #aaa;
+	padding: 8px 12px;
 	text-align: center;
-	color: #666;
-	font-size: 15px;
-	height: 100px;
-	padding-top: 40px;
-	clear: both;
 }
-blockquote {
-	border: 1px solid #ccc;
-	padding: 5px;
-	margin: 10px;
-}
-@media (max-width: 768px) {
-#outer {
-	width: 100%;
-	padding: 0;
-}
-#content {
-	padding: 0 10px;
-}
-.inner, aside {
-	float: none;
-	width: 100%;
-}
-.inner {
-	margin: 0;
-	padding: 10px 0;
-	box-shadow: none;
-}
-aside {
-	padding: 10px 0;
-}
-.header-inner {
-	font-size: 10px;
-}
-h1 {
-	font-size: 20px;
-}
-h2 {
-	font-size: 20px;
-}
+th {
+	background-color: #f2f2f2;
 }
