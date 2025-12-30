@@ -45,9 +45,21 @@ class Title
 			
 			<select id="item" name="item" class="child itemSelect">
 				<option value="">-- 選択してください --</option>
-				<option value="1hashiru">1km走る</option>
-				<option value="2hashiru">2km走る</option>
-				<option value="3hashiru">3km走る</option>
+				<option value="1hashiru">聖書1章:2km</option>
+				<option value="2hashiru">賛美1曲:2km</option>
+				<option value="3hashiru">祈り5分:2km</option>
+				<option value="1hashiru">先生の詩を読む:2km</option>
+				<option value="2hashiru">先生の詩を書く:2km</option>
+				<option value="3hashiru">箴言を読む:2km</option>
+				<option value="1hashiru">箴言を書く:2km</option>
+				<option value="2hashiru">5分掃除:2km</option>
+				<option value="3hashiru">走り1キロ:1km</option>
+				<option value="1hashiru">自転車1キロ:1km</option>
+				<option value="2hashiru">勉強5分:1km</option>
+				<option value="3hashiru">リフティング100回:1km</option>
+				<option value="1hashiru">バスケシュート20本ゴール:1km</option>
+				<option value="2hashiru">サッカーシュート20本ゴール:1km</option>
+				<option value="2hashiru">修正-1</option>
 			</select>
 		
 			<div class="child apply" onClick="apply()">申請する<div>
