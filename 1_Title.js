@@ -61,7 +61,7 @@ class Title
 function apply()
 {
 	// GASのurl
-	const url = "https://script.google.com/macros/s/AKfycbyv-j3nv6qP0J4jayuIXH9WIGYbtz4k8dLV0bsJ2H4G-h4Y7HFQcPKoCjnacasUnkt0ig/exec";
+	const url = "https://script.google.com/macros/s/AKfycbyQ0mg8nZlaMJU-VG42Kabg-QV8ihYADgP4hdiuvjXUSZnnVjuiijkhckUpcV-Pz1BrZA/exec";
 	const options = {
 	  method: "POST",
 	  headers: {
