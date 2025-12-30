@@ -35,3 +35,30 @@ class Title
 		</div>
 
 	
+	
+		<div class="parent">
+			<h1 class="child title">目指せ2026km!!</h1>
+			<div class="child userName">こんにちは。太郎さん<div>
+			<div class="child currentDistance">現在：12km<div>
+			<div class="child totalDistance">全員：120km<div>
+			
+			
+			<select id="item" name="item" class="child itemSelect">
+				<option value="">-- 選択してください --</option>
+				<option value="1hashiru">1km走る</option>
+				<option value="2hashiru">2km走る</option>
+				<option value="3hashiru">3km走る</option>
+			</select>
+		
+			<div class="child apply" onClick="apply()">申請する<div>
+		</div>
+		
+		`;
+		
+	}
+}
+
+function apply()
+{
+	alert("申請が完了しました！");
+}
